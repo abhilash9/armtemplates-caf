@@ -29,9 +29,9 @@ By defining VM objects of the array parameter "VM Config", this templates will p
 ## CLI - Usage
 *az deployment sub create -n NewDeploy -p azuredeploy.parameters.json -f azuredeploy.json -l eastus --debug --verbose*
 
-![template deployments](VM-Create-Objects-Inline/images/Deployments.PNG "template resource objects")
+![template deployments](https://github.com/abhilash9/armtemplates-caf/blob/master/VM-Create-Objects-Inline/images/Deployments.PNG?raw=true "template resource objects")
 
-![template resources](VM-Create-Objects-Inline/images/ResourceDeployed.PNG "template resource objects")
+![template resources](https://github.com/abhilash9/armtemplates-caf/blob/master/VM-Create-Objects-Inline/images/ResourceDeployed.PNG?raw=true "template resource objects")
 
 `Tags: Azure VMs, VM Objects, Inline Deployment, Copy Index, AVSets, Boot Diag Storage Account, Public IP, Managed Disks `
 
