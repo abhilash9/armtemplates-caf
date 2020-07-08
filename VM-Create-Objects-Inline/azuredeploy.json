@@ -126,7 +126,7 @@
                         },
                         {
                             "condition": "[not(empty(parameters('vmConfigs').avsetName))]",
-                            "name": "[if(not(empty(parameters('vmConfigs').avsetName)),parameters('vmConfigs').avsetName,'dummy')]",//"[parameters('vmConfigs').avsetName]",
+                            "name": "[if(not(empty(parameters('vmConfigs').avsetName)),parameters('vmConfigs').avsetName,'dummy')]",
                             "type": "Microsoft.Compute/availabilitySets",
                             "apiVersion": "2019-07-01",
                             "location": "[parameters('vmConfigs').location]",
@@ -178,7 +178,6 @@
                             "location": "[parameters('vmConfigs').location]",
                             "dependsOn": [
                                 "Nics"
-                                //"[variables('avsetID')]"
                             ],
                             "tags": {},
                             "properties": {
