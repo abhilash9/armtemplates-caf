@@ -1,4 +1,4 @@
-# Deploy muliple VMs across resource groups/VNets/Subnets using inline deployments 
+# Deploy multiple VMs across resource groups/VNets/Subnets using inline deployments and manage them from a single parameter file
 *By defining simple VM objects with several conditional properties.*
 
 
