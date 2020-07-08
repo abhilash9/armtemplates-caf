@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmConfig": {
+            "value": [
+                {
+                    "vmName": "vmdev",
+                    "vmIndex": 1,
+                    "noOfVMs": 2,
+                    "vmSize": "Standard_DS2_v2",
+                    "vmSku": {
+                        "offer":"WindowsServer",
+                        "publisher":"MicrosoftWindowsServer",
+                        "sku":"2019-Datacenter"
+                    },
+                    "managedDiskType": "StandardSSD_LRS",
+                    "dataDiskSizeGB": [20,50],
+                    "avsetName": "avset-test",
+                    "existingRGName": "armvmnew",
+                    "location": "eastus",
+                    "existingVnetRGName": "VaultRg",
+                    "existingVnetName": "TowsonDR",
+                    "existingSubnetName": "Subnet1",
+                    "localAdminUsername": "motifadmin",
+                    "vaultName": "armTemplates-caf",
+                    "vaultRGName": "KeyVaults",
+                    "localAdminPassword": "LocalAdminPassword",
+                    "domainPassword":"DomainAdminPassword",
+                    "domainJoin":{
+                        "domainToJoin":"motifworks.us",
+                        "ouPath":"",
+                        "domainUsername":"motifadmin@motifworks.us",
+                        "domainPassword":"DomainAdminPassword",
+                        "domainJoinOptions":3
+                    },
+                    "publicIP":{
+                        "publicIPAllocationMethod":"Static"
+                    },
+                    "diagStorageAccountName":"straccreplogsjlvault4567"
+                },
+                {
+                    "vmName": "vmtest",
+                    "vmIndex": 1,
+                    "noOfVMs": 1,
+                    "vmSize": "Standard_DS2_v2",
+                    "vmSku": {
+                        "Offer":"CentOS",
+                        "Publisher":"OpenLogic",
+                        "Sku":"7.5"
+                    },
+                    "managedDiskType": "StandardSSD_LRS",
+                    "dataDiskSizeGB": [],
+                    "avsetName": "avset-test",
+                    "existingRGName": "armvmnew",
+                    "location": "eastus",
+                    "existingVnetRGName": "VaultRg",
+                    "existingVnetName": "TowsonDR",
+                    "existingSubnetName": "Subnet1",
+                    "localAdminUsername": "motifadmin",
+                    "vaultName": "armTemplates-caf",
+                    "vaultRGName": "KeyVaults",
+                    "localAdminPassword": "LocalAdminPassword",
+                    "domainJoin":{},
+                    "publicIP":{},
+                    "diagStorageAccountName":""
+                }
+            ]
+        }
+    }
+}
